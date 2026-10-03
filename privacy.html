@@ -26,7 +26,7 @@
 <header><div class="brand">Ab<span>Score</span></div></header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 12 July 2026</p>
+<p class="updated">Last updated: 4 October 2026</p>
 
 <p>AbScore ("we", "the app") is a fitness-tracking iOS app. This policy explains what data the app handles and how. We designed AbScore to keep your data on your device.</p>
 
@@ -45,20 +45,26 @@
   <li><strong>Coach messages / food photos:</strong> the text (and any food photo you attach) is sent to our AI provider to generate the reply, then discarded.</li>
   <li><strong>Nutrition lookups:</strong> food names you ask about may be sent to the USDA FoodData Central database to fetch macros. No personal identifier is attached.</li>
 </ul>
-<p>We route these requests through our own secure proxy, which attaches an anonymous per-device identifier used only for rate limiting and abuse prevention. We do not build advertising or tracking profiles, and we do not sell data.</p>
+<p>We route these requests through our own secure proxy (hosted on Cloudflare), which attaches an anonymous per-device identifier used only for rate limiting and abuse prevention. We do not build advertising or tracking profiles, and we do not sell data.</p>
 
 <p><strong>Your consent.</strong> The app shows a clear disclosure and asks for your explicit permission <em>before</em> it sends any photo or message to our AI provider for the first time — nothing is sent to the AI until you agree.</p>
 
-<p><strong>Our AI provider (Anthropic).</strong> The only third party we share your content with is <strong>Anthropic</strong>, who processes it solely to generate your result under their commercial data-protection terms. Anthropic does <strong>not</strong> use this data to train their models and does not retain it beyond their standard API processing. See <a href="https://www.anthropic.com/legal/privacy">anthropic.com/privacy</a>.</p>
+<p><strong>Our AI provider (Anthropic).</strong> The only third party that processes your content is <strong>Anthropic</strong> (our proxy on Cloudflare only passes it through), who processes it solely to generate your result under their commercial data-protection terms. Anthropic does <strong>not</strong> use this data to train their models and does not retain it beyond their standard API processing. See <a href="https://www.anthropic.com/legal/privacy">anthropic.com/privacy</a>.</p>
 
 <h2>Purchases</h2>
-<p>Subscriptions are processed by Apple. We never see your payment details. Apple provides us anonymous receipt data to confirm your subscription status.</p>
+<p>Subscriptions are processed by Apple. We never see your payment details. We use <strong>RevenueCat</strong> to verify purchases: it receives an anonymous app user ID that AbScore generates (not your name, email or Apple ID) and your purchase receipts. See <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
+
+<h2>Measuring our ads (Meta)</h2>
+<p>AbScore includes Meta's Facebook SDK so we can see whether our ads on Facebook and Instagram lead to people using the app. It sends Meta anonymous app events, such as the app opening, onboarding steps, a scan finishing, the paywall being shown and purchases, sometimes with a simple detail like the plan chosen or a score number. The SDK also sends basic device information (such as device model, iOS version and IP address). We never send your photos, scan images, coach messages, name or email. AbScore doesn't ask for permission to track you, so the SDK can't read your device's advertising identifier. See <a href="https://www.facebook.com/privacy/policy">Meta's Privacy Policy</a>.</p>
 
 <h2>Third parties</h2>
 <ul>
   <li><strong>Anthropic</strong> — AI processing of scans and coach messages (<a href="https://www.anthropic.com/legal/privacy">anthropic.com/privacy</a>).</li>
   <li><strong>USDA FoodData Central</strong> — public nutrition database.</li>
   <li><strong>Apple</strong> — app distribution and subscription payments.</li>
+  <li><strong>RevenueCat</strong> — subscription verification (<a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>).</li>
+  <li><strong>Meta</strong> — ad measurement through the Facebook SDK (<a href="https://www.facebook.com/privacy/policy">facebook.com/privacy/policy</a>).</li>
+  <li><strong>Cloudflare</strong> — hosts our proxy that passes scans and coach messages to Anthropic.</li>
 </ul>
 
 <h2>Your control</h2>
